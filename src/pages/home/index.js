@@ -26,11 +26,12 @@ export default function Home () {
 
     return (
         <S.HomeContainer>
+          <S.TextMsg>Search here your friends' repositories simply and quickly.</S.TextMsg>
             <S.Container>
-                <S.Input className="input-user" placeholder="usuário" value={user} onChange={event => setUser(event.target.value)} />
-                <S.Button type="button" onClick={handleSearch}>Pesquisar</S.Button>
+                <S.Input className="input-user" placeholder="Username" value={user} onChange={event => setUser(event.target.value)} />
+                <S.Button type="button" onClick={handleSearch}>Go!</S.Button>
             </S.Container>
-            { errorSearch ?  <S.ErrorMsg>Ocorreu um erro, tente novamente.</S.ErrorMsg> : "" }
+            { errorSearch ?  <S.ErrorMsg>An error has occurred, please try again.</S.ErrorMsg> : "" }
         </S.HomeContainer>
     );
 }

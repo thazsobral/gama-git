@@ -15,9 +15,18 @@ export const Container = styled.div`
     justify-content: center;
 `;
 
+export const TextMsg = styled.span`
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 3rem;
+`;
+
 export const Input = styled.input`
     border: 1px solid #ddd;
-    height: 1.5rem;
+    height: 2rem;
     padding: 0 .5rem;
     border-radius: .5rem 0 0 .5rem;
 
@@ -28,7 +37,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-    height: 1.5rem;
+    height: 2.25rem;
+    padding: 0 2rem;
     border: 1px solid #000;
     background: #000;
     color: #fff;
@@ -42,7 +52,7 @@ export const Button = styled.button`
 
 export const ErrorMsg = styled.span`
     display: block;
-    font-size: .65rem;
+    font-size: 1.3rem;
     color: red;
     font-weight: 600;
     margin-top: 1rem;
