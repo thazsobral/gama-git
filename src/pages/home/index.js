@@ -28,7 +28,7 @@ export default function Home () {
         <S.HomeContainer>
           <S.TextMsg>Search here your friends' repositories simply and quickly.</S.TextMsg>
             <S.Container>
-                <S.Input className="input-user" placeholder="Username" value={user} onChange={event => setUser(event.target.value)} onKeyDown={handleSearch} />
+                <S.Input className="input-user" placeholder="Username" value={user} onChange={event => setUser(event.target.value)} onKeyDown={event => event.key === "Enter" ? handleSearch() : event.preventDefault} />
                 <S.Button type="button" onClick={handleSearch}>Go!</S.Button>
             </S.Container>
             { errorSearch ?  <S.ErrorMsg>An error has occurred, please try again.</S.ErrorMsg> : "" }
