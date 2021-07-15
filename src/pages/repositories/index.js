@@ -24,7 +24,7 @@ export default function Repositories () {
             <S.List>
                 { repositories.map((repository, key) => {
                     return (
-                        <S.ImageFolder>
+                        <S.ImageFolder key={key}>
                             <S.ListItem key={key}> { repository } </S.ListItem>
                         </S.ImageFolder>
                     );
