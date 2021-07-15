@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-    width: 100%;
-    max-width: 991px;
+    width: 100vw;
+    max-width: 900px;
     margin: 0 auto;
 `;
 
@@ -11,7 +11,7 @@ export const Title = styled.h1`
     text-align: center;
     font-size: 2rem;
     font-family: sans-serif;
-    color: #333;
+    color: #fff;
 `;
 
 export const List = styled.ul`
@@ -36,4 +36,5 @@ export const LinkHome = styled(Link)`
     padding: .5rem 0;
     color: #fff;
     text-decoration: none;
+    border-radius: .25rem;
 `;

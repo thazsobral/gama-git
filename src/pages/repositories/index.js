@@ -20,7 +20,7 @@ export default function Repositories () {
 
     return (
         <S.Container>
-            <S.Title>Repositórios</S.Title>
+            <S.Title>Repositories</S.Title>
             <S.List>
                 { repositories.map((repository, key) => {
                     return (
@@ -28,7 +28,7 @@ export default function Repositories () {
                     );
                 }) }
             </S.List>
-            <S.LinkHome to="/">Voltar</S.LinkHome>
+            <S.LinkHome to="/">Back</S.LinkHome>
         </S.Container>
     );
 }
