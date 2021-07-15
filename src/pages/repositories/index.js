@@ -12,7 +12,7 @@ export default function Repositories () {
         if(repositoriesName != null) {
             repositoriesName = JSON.parse(repositoriesName);
             setRepositories(repositoriesName);
-            localStorage.clear();
+            // localStorage.clear();
         } else {
             history.push("/");
         }
@@ -24,7 +24,9 @@ export default function Repositories () {
             <S.List>
                 { repositories.map((repository, key) => {
                     return (
-                        <S.ListItem key={key}> { repository } </S.ListItem>
+                        <S.ImageFolder>
+                            <S.ListItem key={key}> { repository } </S.ListItem>
+                        </S.ImageFolder>
                     );
                 }) }
             </S.List>
