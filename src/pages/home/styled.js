@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const colorWhite = "#f9f9f9";
+const colorBlack = "#000";
+const colorGray = "#ddd";
+
 export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -21,12 +25,12 @@ export const TextMsg = styled.span`
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #fff;
+    color: ${colorWhite};
     margin-bottom: 3rem;
 `;
 
 export const Input = styled.input`
-    border: 1px solid #ddd;
+    border: 1px solid ${colorGray};
     height: 2rem;
     padding: 0 .5rem;
     border-radius: .5rem 0 0 .5rem;
@@ -40,14 +44,20 @@ export const Input = styled.input`
 export const Button = styled.button`
     height: 2.25rem;
     padding: 0 2rem;
-    border: 1px solid #000;
-    background: #000;
-    color: #fff;
+    border: 1px solid ${colorBlack};
+    background: ${colorBlack};
+    color: ${colorWhite};
     border-radius: 0 .5rem .5rem 0;
+    font-weight: bold;
 
     &:focus, &:active {
         outline: none;
         box-shadow: none;
+    }
+
+    &:active {
+        background: ${colorWhite};
+        color: ${colorBlack};
     }
 `;
 

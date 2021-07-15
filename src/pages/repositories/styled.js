@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import iconFolder from "./folder.svg";
+import iconFolder from "../../images/folder.svg";
 
 const colorWhite = "#f9f9f9";
 const colorBlack = "#000";
