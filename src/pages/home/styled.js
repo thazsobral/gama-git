@@ -17,6 +17,7 @@ export const Container = styled.div`
 
 export const TextMsg = styled.span`
     display: block;
+    text-align: center;
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
