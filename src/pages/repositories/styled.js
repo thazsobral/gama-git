@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import iconFolder from "../../images/folder.svg";
+import folderIcon from "../../images/folder.svg";
 
 const colorWhite = "#f9f9f9";
 const colorBlack = "#000";
@@ -28,7 +28,7 @@ export const List = styled.ul`
 `;
 
 export const ImageFolder = styled.div`
-    background: url(${iconFolder});
+    background: url(${folderIcon});
     background-size: cover;
     width: 11rem;
     height: 11rem;
@@ -36,6 +36,11 @@ export const ImageFolder = styled.div`
     align-items: flex-end;
     padding-bottom: .5rem;
     filter: inert();
+
+    &:hover {
+        transition-duration: .5s;
+        filter: invert();
+    }
 `;
 
 export const ListItem = styled.li`
@@ -62,4 +67,8 @@ export const LinkHome = styled(Link)`
         background: ${colorWhite};
         color: ${colorBlack};
     }
+`;
+
+export const LinkRepository = styled.a`
+    text-decoration: none;
 `;

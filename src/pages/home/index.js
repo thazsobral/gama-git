@@ -11,11 +11,11 @@ export default function Home() {
     function handleSearch() {
         axios.get(`https://api.github.com/users/${user}/repos`)
             .then((response => {
-                let respositoriesName = [];
+                let respositories = [];
 
-                response.data.map(repository => respositoriesName.push(repository.name));
+                response.data.map(repository => respositories.push({ name: repository.name, url: repository.html_url }));
 
-                localStorage.setItem("repositoriesName", JSON.stringify(respositoriesName));
+                localStorage.setItem("repositories", JSON.stringify(respositories));
                 setErrorSearch(false);
                 history.push("/repositories");
             }))
