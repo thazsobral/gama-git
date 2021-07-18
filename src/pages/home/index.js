@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import * as S from "./styled";
 
-export default function Home () {
+export default function Home() {
     const history = useHistory();
     const [user, setUser] = useState("");
     const [errorSearch, setErrorSearch] = useState(false);
@@ -13,7 +13,7 @@ export default function Home () {
             .then((response => {
                 let respositoriesName = [];
 
-                response.data.map( repository => respositoriesName.push(repository.name));
+                response.data.map(repository => respositoriesName.push(repository.name));
 
                 localStorage.setItem("repositoriesName", JSON.stringify(respositoriesName));
                 setErrorSearch(false);
@@ -26,12 +26,12 @@ export default function Home () {
 
     return (
         <S.HomeContainer>
-          <S.TextMsg>Search here your friends' repositories simply and quickly.</S.TextMsg>
+            <S.TextMsg>Search here your friends' repositories simply and quickly.</S.TextMsg>
             <S.Container>
                 <S.Input className="input-user" placeholder="Username" value={user} onChange={event => setUser(event.target.value)} onKeyDown={event => event.key === "Enter" ? handleSearch() : event.preventDefault} />
                 <S.Button type="button" onClick={handleSearch}>Go!</S.Button>
             </S.Container>
-            { errorSearch ?  <S.ErrorMsg>An error has occurred, please try again.</S.ErrorMsg> : "" }
+            {errorSearch ? <S.ErrorMsg>An error has occurred, please try again.</S.ErrorMsg> : ""}
         </S.HomeContainer>
     );
 }
