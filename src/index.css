@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-750: #1e293b;
+  --color-slate-850: #0f172a;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Definições de esquema de cores raiz */
+:root {
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  color-scheme: light;
+}
+
+html.dark,
+:root.dark {
+  --bg-app: #0b0f19;
+  --bg-card: #0f172a;
+  --bg-subtle: #141d2e;
+  --border-subtle: #1e293b;
+  --border-strong: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  color-scheme: dark;
+}
+
+/* Transições suaves ao alternar de tema */
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html.dark body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+}
+
+/* Seleção de texto de alto contraste */
+::selection {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+html.dark ::selection {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+/* Adaptações para Tema Claro */
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .bg-slate-900\/90,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/60 {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+html:not(.dark) .bg-slate-850,
+html:not(.dark) .bg-slate-850\/90,
+html:not(.dark) .bg-slate-850\/80,
+html:not(.dark) .bg-slate-850\/50,
+html:not(.dark) .bg-slate-850\/40 {
+  background-color: #ffffff;
+}
+
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-800\/90,
+html:not(.dark) .bg-slate-800\/80,
+html:not(.dark) .bg-slate-800\/50,
+html:not(.dark) .bg-slate-800\/40 {
+  background-color: #f1f5f9;
+}
+
+html:not(.dark) .bg-slate-750 {
+  background-color: #e2e8f0;
+}
+
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-800\/60,
+html:not(.dark) .border-slate-800\/40 {
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-700\/80,
+html:not(.dark) .border-slate-700\/70,
+html:not(.dark) .border-slate-700\/60,
+html:not(.dark) .border-slate-700\/50 {
+  border-color: #cbd5e1;
+}
+
+html:not(.dark) .border-slate-750 {
+  border-color: #cbd5e1;
+}
+
+/* Tipografia adaptada para o modo claro */
+html:not(.dark) h1.text-white,
+html:not(.dark) h2.text-white,
+html:not(.dark) h3.text-white,
+html:not(.dark) h4.text-white,
+html:not(.dark) span.text-white,
+html:not(.dark) div.text-white,
+html:not(.dark) p.text-white {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-100 {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #1e293b;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #334155;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #64748b;
+}
+
+/* Interações em modo claro */
+html:not(.dark) .hover\:bg-slate-800:hover,
+html:not(.dark) .hover\:bg-slate-750:hover {
+  background-color: #e2e8f0;
+}
+
+html:not(.dark) .hover\:bg-slate-700:hover {
+  background-color: #cbd5e1;
+}
+
+html:not(.dark) .hover\:text-white:hover {
+  color: #0f172a;
+}
+
+html:not(.dark) .hover\:text-slate-200:hover {
+  color: #0f172a;
+}
+
+/* Preserva texto branco nos botões e elementos com fundo contrastante */
+html:not(.dark) .bg-indigo-600,
+html:not(.dark) .bg-indigo-500,
+html:not(.dark) .hover\:bg-indigo-500:hover,
+html:not(.dark) .bg-emerald-600,
+html:not(.dark) .bg-rose-600,
+html:not(.dark) .bg-indigo-600 *,
+html:not(.dark) .bg-indigo-500 *,
+html:not(.dark) .bg-emerald-600 *,
+html:not(.dark) .bg-rose-600 * {
+  color: #ffffff !important;
+}
+
+/* Estilização elegante de barras de rolagem */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Utilitários especializados para modo escuro */
+html.dark pre,
+html.dark code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Efeito sutil de foco e elevação para cards escuros */
+html.dark .dark-surface {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+
+html.dark .dark-surface-elevated {
+  background-color: #151f32;
+  border-color: #27354f;
+}
+
+html.dark .dark-surface-inset {
+  background-color: #080c15;
+  border-color: #1e293b;
+}

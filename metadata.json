@@ -1,0 +1,6 @@
+{
+  "name": "Gama Git - Explorador de Commits",
+  "description": "Aplicação interativa para explorar repositórios do GitHub, navegar por branches, inspecionar commits e diffs, visualizar grafo de ramificações, analisar atividade adaptada para temas claro e escuro, e gerar GIFs animados na Máquina do Tempo com animações de Evolução da Árvore, arquivos ou grafo de branches.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
